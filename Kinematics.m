@@ -35,5 +35,5 @@ tx = 193;
     yj22 = ty + rsin(PI - theta22)
     
   %angles  
-theta21 = atan2(y21 - ym2, xj21 - xm2)
-theta 22 = atan2(yj22 - ym2, xj22 - xm2)
+LinkageAngle21 = atan2(yj21 - m2y, xj21 - m2x);
+LinkageAngle22 = atan2(yj22 - m2y, xj22 - m2x);
