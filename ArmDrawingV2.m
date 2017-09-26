@@ -1,3 +1,4 @@
+%Inputs/Veriables
 m1x = 297.0;
 m1y = 472.0;
 m2x = 475.0;
@@ -6,8 +7,7 @@ R = 247.73;
 ty = 72;
 tx = 425;
 
-%%%%%%MOTOR 1%%%%%%%%%%%
-
+%%%%%%%%%%% MOTOR 1 %%%%%%%%%%%
 Delatx = m1x-tx;
 Deltay = ty-m1y;
 
@@ -27,11 +27,13 @@ yj22 = ty + R*sin(pi - Angle22);
 plot([tx xj22 m1x],[ty yj22 m1y],'b')
 plot([tx xj21 m1x],[ty yj21 m1y],'b')
 hold on
+
 M1Angle21 = -atan2(yj21 - m2y, xj21 - m2x);
 M1Angle22 = -atan2(yj22 - m2y, xj22 - m2x);
 M1LinkageAngle21 = ((M1Angle21*180)/pi);
 M1LinkageAngle22 = ((M1Angle22*180)/pi);
-%%%%%%%%%%MOTOR 2%%%%%%%%
+
+%%%%%%%%%%% MOTOR 2 %%%%%%%%%%%
 Delatx = m2x-tx;
 Deltay = ty-m2y;
 
@@ -41,7 +43,6 @@ Angle1 = acos((Delatx)/l);
 Angle2 = acos(l/(2*R));
 Angle21 = ((Angle2)+(pi-Angle1));
 Angle22 = ((pi-Angle1)-(Angle2));
-
 
 xj21 = tx + R*cos(pi - Angle21);
 yj21 = ty + R*sin(pi - Angle21);
@@ -57,3 +58,4 @@ M2Angle22 = -atan2(yj22 - m2y, xj22 - m2x);
 M2LinkageAngle21 = ((M2Angle21*180)/pi);
 M2LinkageAngle22 = ((M2Angle22*180)/pi);
 
+%%%%%%%%%%%Singularitys%%%%%%%%%%%
