@@ -1,17 +1,4 @@
-classdef draw
-    %UNTITLED Summary of this class goes here
-    %   Inverse Kinematics
-    
-    properties
-        %declare fields
-        R = 247.73
-        
-    end
-    
-    methods
-        %intiate fields
-        
-        
+
         l = ((y-m2y)^2+(m2x-tx)^2)^(1/2);
         h = (R^2-(l/2)^2)^(1/2);
         Angle1 = acos((m2x-tx)/l);
@@ -26,7 +13,4 @@ classdef draw
         Ry1 = Rcos(Angle4);
         xj21 = m2x-Rx1;//Angle3
         yj21 = m2y-Ry1;
-    end
-    
-end
 
