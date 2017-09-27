@@ -14,7 +14,10 @@ v2=1600;
 a1=152;
 a2=139;
 a = (a1+(v-v1)*(a2-a1)/(v2-v1)); %What is V?%
-%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%Conversion of angle to PWM%%%%
+v = (v1+(a-a1))*((v2-v1)/a2-a1);  %voltage output for input angle a
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 [t1, t2] = xy2a(x,y);
@@ -30,4 +33,3 @@ out(:,2) = floor(v2);
 out(:,3) = pen;
 
 dlwrite('line txt',out);
-
