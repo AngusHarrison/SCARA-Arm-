@@ -8,20 +8,8 @@ dy = (y1-y0)/N;
 x = x0:dx:x1;
 y = y0:dy:y1;
 
-%%%Calibration Equation%%%
-v1=1400;
-v2=1600;
-a1=152;
-a2=139;
-a = (a1+(v-v1)*(a2-a1)/(v2-v1)); %What is V?%
-%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%Conversion of angle to PWM%%%%
-v = (v1+(a-a1))*((v2-v1)/a2-a1);  %voltage output for input angle a
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-[t1, t2] = xy2a(x,y);
-[v1, v2] = AtoV(t1,t2);
+[t1, t2] =xy2a(x,y);
+[v1, v2] =AtoV(t1,t2);
 s = size(v1);
 time = 1:s(2);
 plot(time,v1,'r',time,v2, 'b')
@@ -33,3 +21,4 @@ out(:,2) = floor(v2);
 out(:,3) = pen;
 
 dlwrite('line txt',out);
+
