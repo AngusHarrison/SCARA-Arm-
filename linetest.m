@@ -21,4 +21,4 @@ out = zeros(s(2),3);
 out(:,1) = floor(v1);
 out(:,2) = floor(v2);
 out(:,3) = pen;
-dlmwrite('line',out);
+dlmwrite('Straightline',out);
