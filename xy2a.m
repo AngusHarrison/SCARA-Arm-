@@ -30,13 +30,7 @@ M1LinkageAngle11 = ((M1Angle11*180)/pi);
 M1LinkageAngle12 = ((M1Angle12*180)/pi);
 
 
-if(any(M1LinkageAngle11>180))
-    M1linkageAngle11=180;
-end
-if(any(M1LinkageAngle12>180))
-    M1linkageAngle12=180;
-end
-	
+
 %%%%%%%%%%% MOTOR 2 %%%%%%%%%%%
 Delatx = m2x-tx;
 Deltay = ty-m2y;
@@ -60,12 +54,22 @@ M2Angle22 = -atan2(yj22 - m2y, xj22 - m2x);
 M2LinkageAngle21 = ((M2Angle21*180)/pi); % needs to be in deg
 M2LinkageAngle22 = ((M2Angle22*180)/pi); % needs to be in deg
 
+%%%%%%%%%%%Singularitys%%%%%%%%%%%
+
 if(any(M2LinkageAngle21>180))
-    M2linkageAngle21=180;
+    M2LinkageAngle21=180;
 end
 if(any(M2LinkageAngle22>180))
-    M2linkageAngle22=180;
+    M2LinkageAngle22=180;
 end
+
+if(any(M1LinkageAngle11>180))
+    M1LinkageAngle11=180;
+end
+if(any(M1LinkageAngle12>180))
+    M1LinkageAngle12=180;
+end
+	
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 t1=M1LinkageAngle11;
