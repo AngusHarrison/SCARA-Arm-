@@ -1,7 +1,7 @@
-x0 = 100; 
-y0 = 200;
-x1 = 220;
-y1 = 100;
+x0 = 350; 
+y0 = 100;
+x1 = 450;
+y1 = 200;
 N = 50;
 dx = (x1-x0)/N;
 dy = (y1-y0)/N;
@@ -17,7 +17,6 @@ plot(time,v1,'r',time,v2, 'b')
 pen = 1500*ones(1,s(2));
 
 out = zeros(s(2),3);
-
 out(:,1) = floor(v1);
 out(:,2) = floor(v2);
 out(:,3) = pen;
